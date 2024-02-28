@@ -40,6 +40,7 @@ __LANGUAGE_MODELS_LIST__ = [
     "gemma",
     "falcon",
     "baichuan2",
+    "mixtral",
 ]
 __VISION_MODELS_LIST__ = ["vit"]
 __MULTIMODAL_MODELS_LIST__ = [
@@ -1085,6 +1086,8 @@ class PEFT(NeMoStage):
             / "examples/nlp/language_modeling/tuning/megatron_gpt_finetuning.py",
             "neva": self._nemo_code_path
             / "examples/multimodal/multimodal_llm/neva/neva_peft.py",
+           "mixtral": self._nemo_code_path
+           / "examples/nlp/language_modeling/tuning/megatron_gpt_finetuning.py",
         }
         return model_type_to_code_path[model_type]
 
