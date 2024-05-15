@@ -190,7 +190,6 @@ model:
     data_path: ${data_dir}/
     lazy_preprocess: True
     is_multimodal: True
-    sep_image_conv_front: False
     conv_template: llama_2
     media_type: video # currently supported: image
     num_frames: 4
