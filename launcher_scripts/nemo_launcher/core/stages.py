@@ -57,8 +57,8 @@ __MULTIMODAL_MODELS_LIST__ = [
     "controlnet",
     "nsfw",
     "neva",
-    "video_neva"
-,]
+    "video_neva",
+]
 
 
 class NemoMegatronStage:
@@ -1277,6 +1277,8 @@ class FWInference(NeMoStage):
             "controlnet": self._nemo_code_path
             / "examples/multimodal/text_to_image/controlnet/controlnet_infer.py",
             "neva": self._nemo_code_path
+            / "examples/multimodal/multimodal_llm/neva/neva_evaluation.py",
+            "video_neva": self._nemo_code_path
             / "examples/multimodal/multimodal_llm/neva/neva_evaluation.py",
             "retro": self._nemo_code_path
             / "examples/nlp/language_modeling/megatron_retro_eval.py",
