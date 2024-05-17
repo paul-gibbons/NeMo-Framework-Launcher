@@ -187,7 +187,7 @@ model:
     packed_sequence: False
     num_workers: 8
     dataloader_type: cyclic
-    data_path: ${data_dir}/
+    data_path: ${data_dir}/video_neva/datasets/videos/valley.json
     lazy_preprocess: True
     is_multimodal: True
     conv_template: llama_2
@@ -195,7 +195,7 @@ model:
     num_frames: 4
     sep_image_conv_front: False
     image_token_len: 576
-    video_folder: ${data_dir}/
+    video_folder: ${data_dir}/video_neva/datasets/videos/
     image_aspect_ratio: 'square'
     
   # Nsys profiling options
