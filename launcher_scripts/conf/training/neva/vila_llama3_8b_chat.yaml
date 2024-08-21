@@ -185,8 +185,25 @@ model:
     delimiter: null # only used for tabular tokenizer
     sentencepiece_legacy: False # Legacy=True allows you to add special tokens to sentencepiece tokenizers.
 
+  energon: True
+  data_energon:
+    __module__: megatron.energon
+    __class__: Metadataset
+    splits:
+      # Train dataset, the datasets will be mixed according to their weights 
+      train:
+        datasets:
+          - weight: 1.0
+            path: 
+
+      # For val and test, datasets will be concatenated
+      val:
+        datasets:
+          - weight: 1.0
+            path: 
+
   data:
-    num_workers: 8
+    num_workers: 0
     dataloader_type: cyclic
     data_path: ${data_dir}/neva/datasets/LLaVA-Pretrain-LCS-558K/blip_laion_cc_sbu_558k.json
     lazy_preprocess: True
